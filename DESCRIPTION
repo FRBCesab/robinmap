@@ -8,8 +8,11 @@ Authors@R: c(
            role    = c("aut", "cre"),
            email   = "nicolas.casajus@fondationbiodiversite.fr",
            comment = c(ORCID = "0000-0002-5537-5294")))
-Description: Produces a map of World countries in the Robinson CRS centered on
-    the Pacific.
+Description: Produces a map of World countries in the Robinson projection 
+    system (or others CRS). This map can be centered on a meridian different
+    from Greenwich.
+    It uses the Natural Earth <https://www.naturalearthdata.com/> layer as a 
+    base map.
 URL: https://github.com/FRBCesab/robinmap
 BugReports: https://github.com/FRBCesab/robinmap/issues
 License: GPL (>= 2)
