@@ -23,6 +23,8 @@ Earth](https://www.naturalearthdata.com/) layer as a base map.
 
 ![](man/figures/eckert_map.png)
 
+![](man/figures/mollweide_map.png)
+
 ## Installation
 
 You can install the development version from

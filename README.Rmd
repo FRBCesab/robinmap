@@ -37,6 +37,8 @@ as a base map.
 
 ![](man/figures/eckert_map.png)
 
+![](man/figures/mollweide_map.png)
+
 
 ## Installation
 
