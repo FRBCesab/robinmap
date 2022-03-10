@@ -25,6 +25,8 @@ Earth](https://www.naturalearthdata.com/) layer as a base map.
 
 ![](man/figures/mollweide_map.png)
 
+![](man/figures/behrmann_map.png)
+
 ## Installation
 
 You can install the development version from
@@ -44,8 +46,23 @@ library("robinmap")
 ## Usage
 
 ``` r
+## Default map ----
 robinmap()
+
+## Robinson projection - Pacific-centered ----
 robinmap(center = 160)
+
+## World Eckert IV projection - Pacific-centered ----
+eckert <- "+proj=eck4 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"
+robinmap(center = 160, crs = eckert)
+
+## Mollweide projection - Pacific-centered ----
+mollweide <- "+proj=moll +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs"
+robinmap(center = 160, crs = mollweide)
+
+## Behrmann projection - Pacific-centered ----
+behrmann <- "+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +datum=WGS84 +ellps=WGS84 +units=m +no_defs"
+robinmap(center = 160, crs = behrmann)
 ```
 
 ## Citation
