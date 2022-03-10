@@ -1,0 +1,10 @@
+citHeader("To cite robinmap in publications use:")
+
+bibentry(
+  bibtype = "Manual",
+  title   = "robinmap: {W}orld {M}ap in {P}acific-centered {R}obinson {P}rojection",
+  author  = c(person("Casajus Nicolas")),
+  year    = "2022",
+  note    = "R package version 1.0",
+  url     = "https://github.com/FRBCesab/robinmap"
+)

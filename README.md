@@ -80,8 +80,8 @@ robinmap(center = 160, crs = behrmann)
 
 Please cite this package as:
 
-> Casajus Nicolas (2022) robinmap: World Map in Pacific Centered
-> Robinson Projection. R package version 0.0.0.9000.
+> Casajus Nicolas (2022) robinmap: World Map in Pacific-centered
+> Robinson Projection. R package version 1.0.
 
 ## Code of Conduct
 
