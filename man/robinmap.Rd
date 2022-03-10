@@ -29,7 +29,8 @@ robinmap(
 \code{'large'}. See \code{?rnaturalearth::ne_countries} for further details.}
 
 \item{crs}{a character of length 1. The Coordinate Reference System (CRS) of
-the map. See \code{?sp::CRS} for further details.}
+the map. See \code{?sp::CRS} for further details.
+\strong{N.B.} the CRS must contain a parameter \code{+lon_0=0} in its definition.}
 
 \item{center}{a numeric of length 1. The longitude of center of the map. Must
 be higher or equal to 0 and lower than 359.}
@@ -66,7 +67,11 @@ be higher or equal to 0 and lower than 359.}
 No return value.
 }
 \description{
-...
+This function maps World countries in the Robinson projection system
+(by default) and centers the map on a meridian different from Greenwich.
+It uses the \href{https://www.naturalearthdata.com/}{Natural Earth} layer as a
+base map. All components of the map can be customized (color, line type,
+etc.).
 }
 \examples{
 \dontrun{

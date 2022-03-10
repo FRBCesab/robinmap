@@ -1,12 +1,18 @@
 #' Decentralized World map
 #' 
-#' @description ...
+#' @description
+#' This function maps World countries in the Robinson projection system 
+#' (by default) and centers the map on a meridian different from Greenwich.
+#' It uses the [Natural Earth](https://www.naturalearthdata.com/) layer as a 
+#' base map. All components of the map can be customized (color, line type, 
+#' etc.).
 #' 
 #' @param res a character of length 1. One among `'small'`, `'medium'`, 
 #'   `'large'`. See `?rnaturalearth::ne_countries` for further details.
 #' 
 #' @param crs a character of length 1. The Coordinate Reference System (CRS) of
 #'   the map. See `?sp::CRS` for further details.
+#'   **N.B.** the CRS must contain a parameter `+lon_0=0` in its definition.
 #' 
 #' @param center a numeric of length 1. The longitude of center of the map. Must
 #'   be higher or equal to 0 and lower than 359.
