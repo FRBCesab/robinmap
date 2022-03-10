@@ -17,8 +17,8 @@ Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repost
 <!-- badges: end -->
 
 The goal of the R package `robinmap` is to map World countries in the
-Robinson projection system (or others CRS) and centered on a different
-meridian than Greenwich. It uses the [Natural
+Robinson projection system (or others CRS) and to center the map on a
+different meridian than Greenwich. It uses the [Natural
 Earth](https://www.naturalearthdata.com/) layer as a base map.
 
 ![](man/figures/robinson_map.png)
@@ -30,6 +30,13 @@ Earth](https://www.naturalearthdata.com/) layer as a base map.
 ![](man/figures/mollweide_map.png)
 
 ![](man/figures/behrmann_map.png)
+
+### System Requirements
+
+This package handles spatial objects and requires some system
+dependencies (GDAL, PROJ and GEOS). Please visit [this
+page](https://github.com/r-spatial/sf/#installing) to correctly install
+these tools.
 
 ## Installation
 
