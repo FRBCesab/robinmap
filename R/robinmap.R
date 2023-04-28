@@ -172,5 +172,5 @@ robinmap <- function(res = "small", crs = NULL, center = 0,
   sp::plot(bbox, lwd = lwd_box, lty = lty_box, col = NA, border = border_box, 
            add = TRUE)
   
-  invisible(NULL)
+  invisible(world)
 }
