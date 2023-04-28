@@ -63,6 +63,11 @@ robinmap()
 ## Robinson projection - Pacific-centered ----
 robinmap(center = 160)
 
+## Robinson projection - Pacific-centered (export layer) ----
+world <- robinmap(center = 160)
+
+sf::st_write(world, "world_layer_pacific_centered.gpkg")
+
 ## World Eckert IV projection - Pacific-centered ----
 eckert <- "+proj=eck4 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"
 robinmap(center = 160, crs = eckert)
@@ -80,7 +85,7 @@ robinmap(center = 160, crs = behrmann)
 
 Please cite this package as:
 
-> Casajus Nicolas (2022) robinmap: World Map in Pacific-centered
+> Casajus Nicolas (2023) robinmap: World Map in Pacific-centered
 > Robinson Projection. R package version 1.0.
 
 ## Code of Conduct
