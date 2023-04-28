@@ -58,88 +58,123 @@ etc.).</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">robinmap</span><span class="op">(</span>
-  res <span class="op">=</span> <span class="st">"small"</span>,
-  crs <span class="op">=</span> <span class="cn">NULL</span>,
-  center <span class="op">=</span> <span class="fl">0</span>,
-  lon <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="op">-</span><span class="fl">180</span>, <span class="fl">180</span>, by <span class="op">=</span> <span class="fl">40</span><span class="op">)</span>,
-  lat <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="op">-</span><span class="fl">90</span>, <span class="fl">90</span>, by <span class="op">=</span> <span class="fl">30</span><span class="op">)</span>,
-  border <span class="op">=</span> <span class="st">"white"</span>,
-  border_box <span class="op">=</span> <span class="va">col</span>,
-  col <span class="op">=</span> <span class="st">"#7D7D7D"</span>,
-  col_box <span class="op">=</span> <span class="st">"#A3C6C7"</span>,
-  col_grat <span class="op">=</span> <span class="va">col</span>,
-  lwd <span class="op">=</span> <span class="fl">0.25</span>,
-  lwd_box <span class="op">=</span> <span class="fl">1</span>,
-  lwd_grat <span class="op">=</span> <span class="va">lwd</span>,
-  lty <span class="op">=</span> <span class="fl">1</span>,
-  lty_box <span class="op">=</span> <span class="va">lty</span>,
-  lty_grat <span class="op">=</span> <span class="fl">3</span>,
-  <span class="va">...</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">robinmap</span><span class="op">(</span></span>
+<span>  res <span class="op">=</span> <span class="st">"small"</span>,</span>
+<span>  crs <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  center <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  lon <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="op">-</span><span class="fl">180</span>, <span class="fl">180</span>, by <span class="op">=</span> <span class="fl">40</span><span class="op">)</span>,</span>
+<span>  lat <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="op">-</span><span class="fl">90</span>, <span class="fl">90</span>, by <span class="op">=</span> <span class="fl">30</span><span class="op">)</span>,</span>
+<span>  border <span class="op">=</span> <span class="st">"white"</span>,</span>
+<span>  border_box <span class="op">=</span> <span class="va">col</span>,</span>
+<span>  col <span class="op">=</span> <span class="st">"#7D7D7D"</span>,</span>
+<span>  col_box <span class="op">=</span> <span class="st">"#A3C6C7"</span>,</span>
+<span>  col_grat <span class="op">=</span> <span class="va">col</span>,</span>
+<span>  lwd <span class="op">=</span> <span class="fl">0.25</span>,</span>
+<span>  lwd_box <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  lwd_grat <span class="op">=</span> <span class="va">lwd</span>,</span>
+<span>  lty <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  lty_box <span class="op">=</span> <span class="va">lty</span>,</span>
+<span>  lty_grat <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>res</dt>
 <dd><p>a character of length 1. One among <code>'small'</code>, <code>'medium'</code>,
-<code>'large'</code>. See <code><a href="https://rdrr.io/pkg/rnaturalearth/man/ne_countries.html" class="external-link">?rnaturalearth::ne_countries</a></code> for further details.</p></dd>
+<code>'large'</code>. See <code><a href="https://docs.ropensci.org/rnaturalearth/reference/ne_countries.html" class="external-link">?rnaturalearth::ne_countries</a></code> for further details.</p></dd>
+
+
 <dt>crs</dt>
 <dd><p>a character of length 1. The Coordinate Reference System (CRS) of
 the map. See <code><a href="https://rdrr.io/pkg/sp/man/CRS-class.html" class="external-link">?sp::CRS</a></code> for further details.
 <strong>N.B.</strong> the CRS must contain a parameter <code>+lon_0=0</code> in its definition.</p></dd>
+
+
 <dt>center</dt>
 <dd><p>a numeric of length 1. The longitude of center of the map. Must
 be higher or equal to 0 and lower than 359.</p></dd>
+
+
 <dt>lon</dt>
 <dd><p>a numeric vector. The longitudes to add meridians.</p></dd>
+
+
 <dt>lat</dt>
 <dd><p>a numeric vector. The latitudes to add parallels.</p></dd>
+
+
 <dt>border</dt>
 <dd><p>the color of countries border.</p></dd>
+
+
 <dt>border_box</dt>
 <dd><p>the color of map frame.</p></dd>
+
+
 <dt>col</dt>
 <dd><p>the color of countries.</p></dd>
+
+
 <dt>col_box</dt>
 <dd><p>the color of map frame (i.e. oceans).</p></dd>
+
+
 <dt>col_grat</dt>
 <dd><p>the color of graticules.</p></dd>
+
+
 <dt>lwd</dt>
 <dd><p>the lines width of countries border.</p></dd>
+
+
 <dt>lwd_box</dt>
 <dd><p>the lines width of map frame.</p></dd>
+
+
 <dt>lwd_grat</dt>
 <dd><p>the lines width of graticules.</p></dd>
+
+
 <dt>lty</dt>
 <dd><p>the line type of countries border.</p></dd>
+
+
 <dt>lty_box</dt>
 <dd><p>the line type of map frame.</p></dd>
+
+
 <dt>lty_grat</dt>
 <dd><p>the line type of graticules.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>other graphical parameters. See <code><a href="https://rdrr.io/r/graphics/par.html" class="external-link">?par</a></code>.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>No return value.</p>
+    
+
+<p>No return value.</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="co">## Robinson World map centered on Greenwich ----</span></span>
-<span class="r-in"><span class="fu">robinmap</span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co">## Robinson World map centered on Pacific ocean ----</span></span>
-<span class="r-in"><span class="fu">robinmap</span><span class="op">(</span>center <span class="op">=</span> <span class="fl">160</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co">## Change projection system ----</span></span>
-<span class="r-in"><span class="va">crs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="st">"+proj=eck4 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 "</span>, </span>
-<span class="r-in">              <span class="st">"+datum=WGS84 +units=m +no_defs"</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">robinmap</span><span class="op">(</span>center <span class="op">=</span> <span class="fl">160</span>, crs <span class="op">=</span> <span class="va">crs</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="co">## Robinson World map centered on Greenwich ----</span></span></span>
+<span class="r-in"><span><span class="fu">robinmap</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Robinson World map centered on Pacific ocean ----</span></span></span>
+<span class="r-in"><span><span class="fu">robinmap</span><span class="op">(</span>center <span class="op">=</span> <span class="fl">160</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Change projection system ----</span></span></span>
+<span class="r-in"><span><span class="va">crs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="st">"+proj=eck4 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 "</span>, </span></span>
+<span class="r-in"><span>              <span class="st">"+datum=WGS84 +units=m +no_defs"</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">robinmap</span><span class="op">(</span>center <span class="op">=</span> <span class="fl">160</span>, crs <span class="op">=</span> <span class="va">crs</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -154,7 +189,7 @@ be higher or equal to 0 and lower than 359.</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>
