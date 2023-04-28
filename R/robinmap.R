@@ -47,7 +47,7 @@
 #' 
 #' @export
 #' 
-#' @return No return value.
+#' @return The world layer as an `sf` object.
 #' 
 #' @examples
 #' \dontrun{

@@ -64,7 +64,7 @@ be higher or equal to 0 and lower than 359.}
 \item{...}{other graphical parameters. See \code{?par}.}
 }
 \value{
-No return value.
+The world layer as an \code{sf} object.
 }
 \description{
 This function maps World countries in the Robinson projection system
